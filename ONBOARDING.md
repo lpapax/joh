@@ -212,7 +212,14 @@ claude mcp add puppeteer -- npx -y @modelcontextprotocol/server-puppeteer
 ### Step-by-step / Langkah demi langkah
 
 **EN —**
-1. Get WordPress admin access from the owner (`https://joguesthouse.my.id/wp-admin/`).
+1. **Create your own WordPress admin user.** Do *not* expect Michal to send you a username and password — set one up yourself. Pick whichever path fits:
+   - **Path A (easiest, if someone with admin can let you in):** the existing admin opens `https://joguesthouse.my.id/wp-admin/users.php` → **Add New User** → fill your email, set role **Administrator**, send invite. You receive the activation email, set your password, done.
+   - **Path B (you have hosting / cPanel / SFTP access):** create the admin yourself via **WP-CLI** in the hosting shell — fast and clean:
+     ```bash
+     wp user create yourname you@example.com --role=administrator --send-email
+     ```
+   - **Path C (fallback — only if A and B aren't possible):** create the admin row directly via **phpMyAdmin** (cPanel → phpMyAdmin → `wp_users` + `wp_usermeta` tables). This is risky — wrong row in `wp_usermeta` for `wp_capabilities` and you can lock yourself out. Search "WordPress add admin via phpMyAdmin" for the exact SQL; double-check the table prefix (`wp_` is default but may differ).
+   - After any path, log in once, go to **Users → Your Profile**, replace any temp password with a strong one, and enable 2FA via the **Wordfence Login Security** plugin.
 2. Install **Astra Pro** (or stay on free Astra — both work) and confirm **Elementor** is active.
 3. In **Appearance → Customize → Global Colors**, set the palette from the prototype:
    - Background: `#FAF7F2` (paper / cream)
@@ -239,7 +246,14 @@ claude mcp add puppeteer -- npx -y @modelcontextprotocol/server-puppeteer
 10. Verify tracking pixels still fire — `TikTok Pixel`, `Meta Pixel`, `Google Tag Manager (GTM-MK4WJPMF)`, `Google Ads (AW-17438288457)` are already installed via plugins; do **not** remove them.
 
 **ID —**
-1. Dapatkan akses admin WordPress dari pemilik (`https://joguesthouse.my.id/wp-admin/`).
+1. **Buat akun admin WordPress Anda sendiri.** Jangan menunggu Michal mengirim username dan password — bikin sendiri. Pilih jalur yang paling cocok:
+   - **Jalur A (paling mudah, kalau ada admin yang bisa kasih akses):** admin yang sudah ada buka `https://joguesthouse.my.id/wp-admin/users.php` → **Add New User** → isi email Anda, set role **Administrator**, kirim invite. Anda dapat email aktivasi, set password, selesai.
+   - **Jalur B (Anda punya akses hosting / cPanel / SFTP):** buat admin sendiri lewat **WP-CLI** di shell hosting — cepat dan bersih:
+     ```bash
+     wp user create namaanda you@example.com --role=administrator --send-email
+     ```
+   - **Jalur C (cadangan — kalau A dan B tidak bisa):** buat row admin langsung lewat **phpMyAdmin** (cPanel → phpMyAdmin → tabel `wp_users` + `wp_usermeta`). Ini berisiko — salah isi row di `wp_usermeta` untuk `wp_capabilities` bisa bikin Anda terkunci dari WordPress. Cari "WordPress add admin via phpMyAdmin" untuk SQL yang tepat; periksa lagi prefix tabelnya (`wp_` default, tapi mungkin beda).
+   - Setelah pakai jalur manapun, login sekali, masuk **Users → Your Profile**, ganti password sementara jadi password yang kuat, dan aktifkan 2FA pakai plugin **Wordfence Login Security**.
 2. Install **Astra Pro** (atau pakai Astra gratis — sama-sama bisa) dan pastikan **Elementor** aktif.
 3. Di **Appearance → Customize → Global Colors**, atur palette dari prototype:
    - Background: `#FAF7F2` (paper / cream)
@@ -264,6 +278,40 @@ claude mcp add puppeteer -- npx -y @modelcontextprotocol/server-puppeteer
 8. Test di mobile (preview Elementor → ikon mobile) sebelum publish.
 9. Pastikan WhatsApp deep-link pakai `api.whatsapp.com/send?phone=6285108002536` (bekerja di iOS Safari + browser dalam TikTok/Instagram — `wa.me` TIDAK, dan site sekarang masih pakai `wa.me`).
 10. Verifikasi tracking pixel masih jalan — `TikTok Pixel`, `Meta Pixel`, `Google Tag Manager (GTM-MK4WJPMF)`, `Google Ads (AW-17438288457)` sudah terpasang lewat plugin; **jangan** hapus.
+
+### What to request from the owner (never paste secrets into this repo) / Apa yang harus diminta dari pemilik (jangan tempel rahasia ke repo ini)
+
+**EN —** Before you can publish anything, you need a few things from the property owner. **Do not paste passwords, API keys, or DB credentials into this repository** — the repo is public. Use these instead via a local untracked `.env.local` file (already gitignored) or your password manager:
+
+| What to ask for | Why |
+|---|---|
+| WordPress admin invite (via Path A above) OR cPanel/SFTP login (via Path B) | To edit the site |
+| Google Tag Manager (`GTM-MK4WJPMF`) edit access | To verify and adjust the existing pixel triggers |
+| Google Ads account access (read-only is fine) | To confirm conversion tag `AW-17438288457` still fires after publish |
+| Meta Business Manager access | To watch the Meta Pixel `770014465395193` in Test Events |
+| TikTok Ads Manager access | To watch TikTok Pixel `D2MR5GRC77U4PA826B90` |
+| Real Google Maps pin location | For accurate `geo` lat/lng in `LodgingBusiness` JSON-LD |
+| Listing URLs on Agoda / Traveloka / Booking.com | For the `sameAs` JSON-LD field and the OTA section links |
+| Confirmed Bahasa copy review | Final Indonesian-language sign-off before publish |
+| Final room photos (or permission to keep using existing WP photos) | For the gallery + hero LCP image |
+
+**ID —** Sebelum Anda bisa publish apapun, ada beberapa hal yang harus diminta ke pemilik properti. **Jangan tempel password, API key, atau DB credentials ke repository ini** — repo ini publik. Pakai file `.env.local` lokal yang tidak di-track (sudah gitignored) atau password manager Anda:
+
+| Yang diminta | Untuk apa |
+|---|---|
+| Undangan admin WordPress (Jalur A di atas) ATAU login cPanel/SFTP (Jalur B) | Untuk edit site |
+| Akses edit Google Tag Manager (`GTM-MK4WJPMF`) | Verifikasi dan sesuaikan trigger pixel yang ada |
+| Akses akun Google Ads (read-only cukup) | Konfirmasi conversion tag `AW-17438288457` masih jalan setelah publish |
+| Akses Meta Business Manager | Pantau Meta Pixel `770014465395193` di Test Events |
+| Akses TikTok Ads Manager | Pantau TikTok Pixel `D2MR5GRC77U4PA826B90` |
+| Pin lokasi Google Maps yang akurat | Untuk `geo` lat/lng yang benar di JSON-LD `LodgingBusiness` |
+| URL listing di Agoda / Traveloka / Booking.com | Untuk field `sameAs` JSON-LD dan link section OTA |
+| Konfirmasi review copy Bahasa | Persetujuan final konten Bahasa Indonesia sebelum publish |
+| Foto kamar final (atau izin pakai foto WP yang ada) | Untuk galeri + hero LCP image |
+
+> ⚠️ **EN — Public repo reminder:** anyone on the internet can see this code. Never commit `.env`, passwords, or DB dumps. The `.gitignore` already blocks `.env` and `.env.local` — leave those rules in place.
+>
+> ⚠️ **ID — Pengingat repo publik:** siapapun di internet bisa melihat kode ini. Jangan commit `.env`, password, atau dump DB. `.gitignore` sudah memblok `.env` dan `.env.local` — biarkan aturan itu tetap ada.
 
 ### Asking Claude for help inside this workflow / Minta bantuan Claude di workflow ini
 

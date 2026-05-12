@@ -99,9 +99,9 @@ claude
 
 ## 3. Get the project from GitHub
 
-**EN —** This repo lives at: **`https://github.com/lpapax/jo-guest-house`** *(Michal will confirm the exact URL after he pushes — see "Owner's push checklist" at the bottom of this file.)*
+**EN —** This repo lives at: **<https://github.com/lpapax/joh>**
 
-**ID —** Repo ini ada di: **`https://github.com/lpapax/jo-guest-house`** *(Michal akan konfirmasi URL pastinya setelah dia push — lihat "Owner's push checklist" di bagian bawah file ini.)*
+**ID —** Repo ini ada di: **<https://github.com/lpapax/joh>**
 
 ### Clone it / Clone-nya
 
@@ -112,8 +112,8 @@ claude
 ```powershell
 mkdir $HOME\Projects
 cd $HOME\Projects
-git clone https://github.com/lpapax/jo-guest-house.git
-cd jo-guest-house
+git clone https://github.com/lpapax/joh.git
+cd joh
 code .
 ```
 
@@ -168,7 +168,7 @@ python -m http.server 5173
 **ID —** Buka PowerShell, masuk ke folder project, lalu start Claude:
 
 ```powershell
-cd $HOME\Projects\jo-guest-house
+cd $HOME\Projects\joh
 claude
 ```
 
@@ -362,15 +362,15 @@ gh auth login
 
 # 2. create the repo and push
 cd "C:\Users\micha\OneDrive - Univerzita Palackého v Olomouci\Plocha\Jonathan"
-gh repo create jo-guest-house --public --source=. --remote=origin --push --description "Jo Guest House — landing site rebuild (prototype + plan)"
+gh repo create joh --public --source=. --remote=origin --push --description "Jo Guest House — landing site rebuild (prototype + plan)"
 
 # 3. verify
 gh repo view --web
 ```
 
-**EN —** After that the URL `https://github.com/lpapax/jo-guest-house` works — replace any placeholders in this file if your GitHub username is different.
+**EN —** After that the URL `https://github.com/lpapax/joh` works — replace any placeholders in this file if your GitHub username is different.
 
-**ID —** Setelah itu URL `https://github.com/lpapax/jo-guest-house` aktif — ganti placeholder di file ini kalau username GitHub Anda berbeda.
+**ID —** Setelah itu URL `https://github.com/lpapax/joh` aktif — ganti placeholder di file ini kalau username GitHub Anda berbeda.
 
 ---
 
@@ -382,8 +382,8 @@ node --version            # confirm prerequisite
 npm install -g @anthropic-ai/claude-code
 
 # Clone the project (once)
-git clone https://github.com/lpapax/jo-guest-house.git
-cd jo-guest-house
+git clone https://github.com/lpapax/joh.git
+cd joh
 
 # Open in editor + Claude Code
 code .
@@ -395,7 +395,7 @@ python -m http.server 5173
 # → open http://localhost:5173
 
 # Pull updates from Michal
-cd jo-guest-house
+cd joh
 git pull
 
 # Push your own changes

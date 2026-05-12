@@ -156,17 +156,93 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-Which phases cover which requirements. Filled in by roadmapper in next step.
+Which phases cover which requirements. Populated by gsd-roadmapper on 2026-05-12.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| _(populated by gsd-roadmapper)_ | | |
+| SETUP-01 | Phase 1 | Pending |
+| SETUP-02 | Phase 1 | Pending |
+| SETUP-03 | Phase 1 | Pending |
+| CONT-01 | Phase 2 | Pending |
+| CONT-02 | Phase 2 | Pending |
+| CONT-03 | Phase 2 | Pending |
+| CONT-04 | Phase 2 | Pending |
+| CONT-05 | Phase 4 | Pending |
+| CONT-06 | Phase 4 | Pending |
+| CONT-07 | Phase 2 | Pending |
+| CONT-08 | Phase 2 | Pending |
+| SECT-01 | Phase 5 | Pending |
+| SECT-02 | Phase 5 | Pending |
+| SECT-03 | Phase 5 | Pending |
+| SECT-04 | Phase 5 | Pending |
+| SECT-05 | Phase 5 | Pending |
+| SECT-06 | Phase 5 | Pending |
+| SECT-07 | Phase 5 | Pending |
+| SECT-08 | Phase 5 | Pending |
+| SECT-09 | Phase 5 | Pending |
+| SECT-10 | Phase 5 | Pending |
+| SECT-11 | Phase 5 | Pending |
+| WA-01 | Phase 4 | Pending |
+| WA-02 | Phase 4 | Pending |
+| WA-03 | Phase 4 | Pending |
+| WA-04 | Phase 4 | Pending |
+| WA-05 | Phase 4 | Pending |
+| WA-06 | Phase 4 | Pending |
+| WA-07 | Phase 4 | Pending |
+| TRACK-01 | Phase 3 | Pending |
+| TRACK-02 | Phase 3 | Pending |
+| TRACK-03 | Phase 3 | Pending |
+| TRACK-04 | Phase 3 | Pending |
+| TRACK-05 | Phase 6 | Pending |
+| TRACK-06 | Phase 6 | Pending |
+| TRACK-07 | Phase 4 | Pending |
+| SEO-01 | Phase 3 | Pending |
+| SEO-02 | Phase 3 | Pending |
+| SEO-03 | Phase 3 | Pending |
+| SEO-04 | Phase 5 | Pending |
+| SEO-05 | Phase 5 | Pending |
+| SEO-06 | Phase 3 | Pending |
+| SEO-07 | Phase 5 | Pending |
+| SEO-08 | Phase 3 | Pending |
+| PERF-01 | Phase 5 | Pending |
+| PERF-02 | Phase 5 | Pending |
+| PERF-03 | Phase 5 | Pending |
+| PERF-04 | Phase 5 | Pending |
+| PERF-05 | Phase 3 | Pending |
+| PERF-06 | Phase 3 | Pending |
+| PERF-07 | Phase 3 | Pending |
+| PERF-08 | Phase 3 | Pending |
+| FORM-01 | Phase 5 | Pending |
+| FORM-02 | Phase 5 | Pending |
+| FORM-03 | Phase 5 | Pending |
+| FORM-04 | Phase 5 | Pending |
+| FORM-05 | Phase 5 | Pending |
+| FORM-06 | Phase 5 | Pending |
+| DEPLOY-01 | Phase 6 | Pending |
+| DEPLOY-02 | Phase 6 | Pending |
+| DEPLOY-03 | Phase 6 | Pending |
+| DEPLOY-04 | Phase 6 | Pending |
+| DEPLOY-05 | Phase 6 | Pending |
+| DEPLOY-06 | Phase 6 | Pending |
+| DEPLOY-07 | Phase 6 | Pending |
+| DEPLOY-08 | Phase 6 | Pending |
 
 **Coverage:**
-- v1 requirements: 60 total
-- Mapped to phases: 0 (pre-roadmap)
-- Unmapped: 60 ⚠️ (resolved after roadmap creation)
+- v1 requirements: 66 total
+- Mapped to phases: 66 ✓
+- Unmapped: 0 ✓
+
+**Per-phase requirement counts:**
+| Phase | Requirements |
+|-------|--------------|
+| Phase 1: Setup + Key Decisions | 3 (SETUP-01..03) |
+| Phase 2: Content Inventory Gate | 6 (CONT-01..04, CONT-07, CONT-08) |
+| Phase 3: Foundation + Tracking Scaffold | 13 (TRACK-01..04, SEO-01..03, SEO-06, SEO-08, PERF-05..08) |
+| Phase 4: WhatsApp Primitive + Image Pipeline | 10 (WA-01..07, TRACK-07, CONT-05, CONT-06) |
+| Phase 5: Sections + SEO Schema + Form | 24 (SECT-01..11, SEO-04, SEO-05, SEO-07, FORM-01..06, PERF-01..04) |
+| Phase 6: Tracking Verification + Cutover | 10 (TRACK-05, TRACK-06, DEPLOY-01..08) |
+| **Total** | **66** |
 
 ---
 *Requirements defined: 2026-05-12*
-*Last updated: 2026-05-12 after initial definition*
+*Last updated: 2026-05-12 after roadmap creation (traceability populated)*

@@ -8,6 +8,34 @@
 
 ---
 
+## TL;DR — read this first (2 minutes)
+
+**EN —** This repo has 4 docs and 1 prototype. Open them in this order. Don't try to read everything at once.
+
+**ID —** Repo ini punya 4 dokumen dan 1 prototype. Buka dengan urutan ini. Jangan baca semuanya sekaligus.
+
+| # | Open | When | Time |
+|---|---|---|---|
+| 1 | **`README.md`** | 30-second context — what this project is | 1 min |
+| 2 | **`prototype/index.html`** (in browser) | See the design you're rebuilding | 2 min |
+| 3 | **`ONBOARDING.md`** (this file) | Install everything, clone, run prototype | 30–45 min |
+| 4 | **`SETUP-CLAUDE.md`** | Plugins, MCP servers, model routing for Pro plan | 20 min (skim) |
+| 5 | **`CLAUDE.md`** + `.planning/` | Auto-read by Claude — you don't open these manually | 0 min |
+
+### Your first hour, step-by-step / Jam pertama Anda, langkah demi langkah
+
+1. **EN —** Install **Node.js**, **Git**, **VS Code** ([section 1](#1-install-the-prerequisites)). **ID —** Install Node.js, Git, VS Code ([bagian 1](#1-install-the-prerequisites)).
+2. **EN —** Install **Claude Code** + log in ([section 2](#2-install-claude-code)). **ID —** Install Claude Code + login ([bagian 2](#2-install-claude-code)).
+3. **EN —** Clone the repo with `git clone https://github.com/lpapax/joh.git` ([section 3](#3-get-the-project-from-github)). **ID —** Clone repo ([bagian 3](#3-get-the-project-from-github)).
+4. **EN —** Open `prototype/index.html` in browser — that's the goal. **ID —** Buka `prototype/index.html` di browser — itu targetnya.
+5. **EN —** Run `claude` in the project folder. Ask: *"What's in `.planning/ROADMAP.md`?"* — Claude reads it for you. **ID —** Jalankan `claude` di folder project. Tanya: *"What's in `.planning/ROADMAP.md`?"*
+
+> **EN —** Stuck? Ping Michal on WhatsApp. Don't burn an hour on a tooling problem — message him.
+>
+> **ID —** Stuck? Hubungi Michal lewat WhatsApp. Jangan habiskan 1 jam untuk masalah tooling — kirim pesan.
+
+---
+
 ## What you'll get by the end of this guide
 
 **EN —** A fully working development setup: Claude Code installed, the project cloned from GitHub, the prototype running locally in your browser, and a clear path to rebuild the design inside the existing WordPress site at `joguesthouse.my.id`.

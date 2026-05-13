@@ -203,6 +203,26 @@ claude
 /plugin install productivity@knowledge-work-plugins
 ```
 
+### If you swap WordPress for a headless CMS later / Kalau ganti WordPress ke headless CMS nanti
+
+**EN —** If the owner ever agrees to move off WordPress (or you want a smoother content workflow than Elementor), these two unlock a Sanity + Cloudinary content pipeline. Both are free at this scale.
+
+**ID —** Kalau pemilik setuju pindah dari WordPress (atau Anda ingin workflow konten yang lebih mulus dari Elementor), dua plugin ini buka pipeline Sanity + Cloudinary. Keduanya gratis di skala ini.
+
+| Plugin | Marketplace | What it does (EN) | Untuk apa (ID) |
+|---|---|---|---|
+| `sanity-plugin` | knowledge-work-plugins | Headless CMS — owner edits rooms / FAQ / pricing in a clean UI, Astro pulls via API | Headless CMS — pemilik edit kamar / FAQ / harga di UI bersih, Astro tarik via API |
+| `cloudinary` | knowledge-work-plugins | Image CDN + on-the-fly transforms (avif/webp, resize, crop) for room photos | CDN gambar + transformasi on-the-fly (avif/webp, resize, crop) untuk foto kamar |
+
+```text
+/plugin install sanity-plugin@knowledge-work-plugins
+/plugin install cloudinary@knowledge-work-plugins
+```
+
+> **EN —** Don't install these for v1 — current path is WordPress reskin. Add only if you migrate to Astro and the owner wants a CMS UI.
+>
+> **ID —** Jangan install untuk v1 — jalur sekarang adalah reskin WordPress. Tambah hanya kalau pindah ke Astro dan pemilik ingin UI CMS.
+
 ---
 
 ## 6. Plugins — Tier 3 Optional (specialized)

@@ -1,5 +1,8 @@
 # Claude Code project-local state (per-machine, not shared)
-.claude/
+.claude/*
+# …but DO share project slash commands so the friend gets /opus, /sonnet, /auto
+!.claude/commands/
+!.claude/commands/*.md
 
 # OS / editor
 .DS_Store

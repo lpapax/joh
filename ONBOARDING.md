@@ -69,6 +69,10 @@ If any command says *"not recognized"*, that tool didn't install correctly — r
 
 ## 2. Install Claude Code
 
+> **EN —** For the full Claude Code setup — terminal vs Antigravity IDE, all plugins Michal uses (tiered), MCP servers, and Pro-plan token-saving model routing — see **[`SETUP-CLAUDE.md`](./SETUP-CLAUDE.md)**. The 5 steps below are the bare minimum to get started.
+>
+> **ID —** Untuk setup Claude Code lengkap — pilihan terminal vs Antigravity IDE, semua plugin yang dipakai Michal (bertingkat), MCP server, dan model routing untuk hemat token Pro plan — lihat **[`SETUP-CLAUDE.md`](./SETUP-CLAUDE.md)**. 5 langkah di bawah adalah minimum untuk mulai.
+
 **EN —** Claude Code is Anthropic's AI coding agent. It runs inside your terminal and inside VS Code. Install it globally with npm:
 
 **ID —** Claude Code adalah AI coding agent dari Anthropic. Dia berjalan di terminal Anda dan di dalam VS Code. Install secara global dengan npm:
@@ -128,7 +132,9 @@ code .
 | `prototype/` | The working HTML preview — open `index.html` | Preview HTML yang berfungsi — buka `index.html` |
 | `.planning/` | Project plan, requirements, roadmap, deep research | Rencana project, requirements, roadmap, riset |
 | `ONBOARDING.md` | This file | File ini |
+| `SETUP-CLAUDE.md` | Full Claude Code setup — plugins, MCP, model routing | Setup Claude Code lengkap — plugin, MCP, model routing |
 | `CLAUDE.md` | Auto-loaded instructions for Claude Code | Instruksi otomatis untuk Claude Code |
+| `.claude/commands/` | Project slash commands (`/opus`, `/sonnet`, `/auto`) | Slash command project (`/opus`, `/sonnet`, `/auto`) |
 
 ---
 
